@@ -45,7 +45,177 @@ const companies = [
 // points.sort((a, b) => b - a);
 // console.log(points);
 
-const points = [40, 100, 1, 5, 25, 10];
+// const points = [40, 100, 1, 5, 25, 10];
 
-const arr = Math.max.apply(null, points);
-console.log(arr);
+// const arr = Math.max.apply(()null, points);
+// console.log(arr);
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// for (let x of fruits) {
+//   console.log(x);
+// }
+//const words = ["ball", "area", "lead", "lady"];
+
+// let test2 = [];
+// let result = false;
+
+// for (let word of words) {
+
+//   let newword = "";
+//   for (let x = 0; x < word.length; x++) {
+//     //     console.log(x);
+//     for (let word2 of words) {
+//       newword += word.charAt(x);
+//     }
+
+//     //     // if (test2 !== test1) {
+//     //     //   result = false;
+//     //     //   break;
+//     //     // }
+//     //     // result = true;
+//   }
+//   test2.push(newword);
+// }
+// console.log(test2);
+//console.log(result);
+// let result = null;
+// let test1 = "";
+// let test2 = "";
+
+// for (let word of words) {
+//   console.log(word);
+//   test1 = word;
+//   //
+//   let newtest = "";
+
+//   for (let x = 0; x < word.length; x++) {
+//     for (let word2 of words) {
+//       newtest += word2.charAt(x);
+//     }
+//     // if (test1 === test2) {
+//     //   result = true;
+//     // } else {
+//     //   result = false;
+//     // }
+//     console.log(test1 + " and " + test2);
+//   }
+//   test2 = newtest;
+
+//   // test = "";
+//   //   if (word === test) {
+//   //     result = true;
+//   //   } else {
+//   //     result = false;
+//   //   }
+// }
+// console.log(result);
+// // console.log(newwords);
+//const arr = ["ball", "area", "lead", "lady"];
+// const arr = ["abcd", "bnrt", "crm", "dt"];
+// const findValidSquares = (arr = []) => {
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr[i].length; j++) {
+//       if (
+//         i >= arr.length ||
+//         j >= arr.length ||
+//         j >= arr[i].length ||
+//         i >= arr[j].length
+//       ) {
+//         return false;
+//       }
+//       if (arr[i][j] !== arr[j][i]) {
+//         return false;
+//       }
+//     }
+//   }
+//   return true;
+// };
+// console.log(findValidSquares(arr));
+// const aut = "ball";
+// for (let char of aut) {
+//   console.log(char);
+// }
+// Array.prototype.wale = true;
+
+// for (word in arr) {
+//   if (arr.hasOwnProperty(word)) console.log(word);
+// }
+// const arr = ["ball", "area", "lead", "lady"];
+// let word = "";
+// let result;
+// for (let x = 0; x < arr.length; x++) {
+//   for (let u = 0; u < arr[x].length; ++u) {
+//     word += arr[u].charAt(x);
+//   }
+//   if (arr[x] !== word) {
+//     result = false;
+//     break;
+//   }
+//   word = "";
+//   result = true;
+// }
+// console.log(result);
+
+// const str =
+//   "Hardships often prepare ordinary people for an extraordinary destiny";
+// const result = [];
+// function findShortestString(str) {
+//   let words = str.split(" ");
+//   const wordArray = words.map((word) => {
+//     return { word: word, length: word.length };
+//   });
+//   const sorted = wordArray.sort((a, b) => a.length - b.length);
+//   result.push(sorted[0].word);
+//   sorted.reverse();
+//   result.push(sorted[0].word);
+//   console.log(result);
+// }
+// findShortestString(str);
+
+// const str = "This is a sample string";
+// const findSmallest = (str) => {
+//   const strArr = str.split(" ");
+//   const creds = strArr.reduce(
+//     (acc, val) => {
+//       let { length, word } = acc;
+//       console.log(val + " " + length);
+//       //   if (val.length < length) {
+//       //     length = val.length;
+//       //     word = val;
+//       //   }
+//       return { length, word };
+//     },
+//     {
+//       length: Infinity,
+//       word: "",
+//     }
+//   );
+//   return creds.word;
+// };
+// console.log(findSmallest(str));
+
+// const countOccurrences = (arr, val) =>
+//   arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
+
+// for (let x = 1; x < arr.lenth)
+
+// console.log(countOccurrences([1, 1, 2, 1, 2, 3], 1));
+// console.log(countOccurrences([1, 1, 2, 1, 2, 3], 2));
+// console.log(countOccurrences([1, 1, 2, 1, 2, 3], 3));
+
+// const arr = [2, 2, 3, 3];
+// const obj = [];
+// for (let x = 0; x < arr.length; x++) {
+//   const newarray = arr.filter((num) => num === arr[x]);
+//   if (arr[x] === newarray.length) {
+//     obj.push({ number: arr[x], freq: newarray.length });
+//     obj.sort((a, b) => b.freq - a.freq);
+//     console.log(obj);
+//   }
+// }
+// if (obj.length > 0) {
+//   console.log(obj[0].number);
+// } else {
+//   console.log(-1);
+// }
