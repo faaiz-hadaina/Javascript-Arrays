@@ -1,0 +1,23 @@
+{
+  "name": "Javascript-Arrays",
+  "version": "1.0.0",
+  "description": "",
+  "main": "arrays.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faaiz-hadaina/Javascript-Arrays.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/faaiz-hadaina/Javascript-Arrays/issues"
+  },
+  "homepage": "https://github.com/faaiz-hadaina/Javascript-Arrays#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}

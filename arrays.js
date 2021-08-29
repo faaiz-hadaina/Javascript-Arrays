@@ -1,12 +1,12 @@
-const companies = [
-  { name: "Haifx", category: "ICT", year: "2010" },
-  { name: "7thTower", category: "ICT", year: "2020" },
-  { name: "Meed", category: "ICT", year: "2000" },
-  { name: "Qiswah", category: "Printing", year: "2010" },
-  { name: "Examian", category: "ICT", year: "2018" },
-  { name: "Edperfect", category: "ICT", year: "2006" },
-  { name: "PrintForte", category: "Printing", year: "2014" },
-];
+// const companies = [
+//   { name: 'Haifx', category: 'ICT', year: '2010' },
+//   { name: '7thTower', category: 'ICT', year: '2020' },
+//   { name: 'Meed', category: 'ICT', year: '2000' },
+//   { name: 'Qiswah', category: 'Printing', year: '2010' },
+//   { name: 'Examian', category: 'ICT', year: '2018' },
+//   { name: 'Edperfect', category: 'ICT', year: '2006' },
+//   { name: 'PrintForte', category: 'Printing', year: '2014' }
+// ];
 
 //const company2010 =
 
@@ -219,3 +219,123 @@ const companies = [
 // } else {
 //   console.log(-1);
 // }
+// const array = [
+//   [2],
+//   [3],
+//   [4],
+//   [5],
+//   [6],
+//   [7],
+//   [2],
+//   [4],
+//   [2],
+//   [5],
+//   [2],
+//   [4],
+//   [3],
+//   [6],
+//   [2],
+//   [3]
+// ];
+// const newarray = [];
+// for (x = 0; x < array.length; x++) {
+//   if (newarray.includes(array[x]) === false) newarray.push(array[x]);
+// }
+// console.log(newarray);
+
+// const x = [2];
+// const y = [2];
+
+// function arrayEquals(a, b) {
+//   return (
+//     Array.isArray(a) &&
+//     Array.isArray(b) &&
+//     a.length === b.length &&
+//     a.every((val, index) => val === b[index])
+//   );
+// }
+// if (arrayEquals(x, y)) {
+//   console.log('true');
+// } else {
+//   console.log('false');
+// }
+
+//https://api.2vendors.com/assets/images/categories/
+
+let expense = [2200, 2350, 2600, 2130, 2190];
+function getExtra(array) {
+  let extra = array[1] - array[0];
+  return extra;
+}
+//console.log(getExtra(expense));
+
+function totalFirstQuarter(array) {
+  let total = 0;
+  for (let x = 0; x < 3; x++) {
+    total += array[x];
+  }
+  return total;
+}
+// console.log(totalFirstQuarter(expense));
+
+function findExact(array) {
+  if (array.includes(2000)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+//console.log(findExact(expense));
+
+function addNew(array, newitem) {
+  array.push(newitem);
+  // return array;
+}
+addNew(expense, 1980);
+//console.log(expense);
+
+function refund(array, change) {
+  let newAmount = array[3] - change;
+  array[3] = newAmount;
+}
+//refund(expense, 200);
+//console.log(expense);
+
+const heros = ['spider man', 'thor', 'hulk', 'iron man', 'captain america'];
+
+function findLength(array) {
+  return array.length;
+}
+//console.log(findLength(heros));
+
+function addPanther(array, newitem) {
+  array.push(newitem);
+  return array;
+}
+//console.log(addPanther(heros, 'black panther'));
+
+function addPantherAfter(array, newitem) {
+  array.pop();
+  array.splice(3, 0, newitem);
+  return array;
+}
+//console.log(addPantherAfter(heros, 'black panther'));
+
+function removeAngry(array, replacement) {
+  array.splice(1, 2, replacement);
+  return array;
+}
+//console.log(removeAngry(heros, 'doctor strange'));
+
+function sortItems(array) {
+  array.sort();
+  return array;
+}
+//console.log(sortItems(heros));
+
+function generateOddnumbers(n) {
+  for (let x = 0; x < n; x++) {
+    if (x % 2 != 0) console.log(x);
+  }
+}
+generateOddnumbers(10);
