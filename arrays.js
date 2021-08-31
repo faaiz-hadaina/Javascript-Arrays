@@ -262,80 +262,122 @@
 
 //https://api.2vendors.com/assets/images/categories/
 
-let expense = [2200, 2350, 2600, 2130, 2190];
-function getExtra(array) {
-  let extra = array[1] - array[0];
-  return extra;
-}
+// let expense = [2200, 2350, 2600, 2130, 2190];
+// function getExtra(array) {
+//   let extra = array[1] - array[0];
+//   return extra;
+// }
 //console.log(getExtra(expense));
 
-function totalFirstQuarter(array) {
-  let total = 0;
-  for (let x = 0; x < 3; x++) {
-    total += array[x];
-  }
-  return total;
-}
+// function totalFirstQuarter(array) {
+//   let total = 0;
+//   for (let x = 0; x < 3; x++) {
+//     total += array[x];
+//   }
+//   return total;
+// }
 // console.log(totalFirstQuarter(expense));
 
-function findExact(array) {
-  if (array.includes(2000)) {
-    return true;
-  } else {
-    return false;
-  }
-}
+// function findExact(array) {
+//   if (array.includes(2000)) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 //console.log(findExact(expense));
 
-function addNew(array, newitem) {
-  array.push(newitem);
-  // return array;
-}
-addNew(expense, 1980);
+// function addNew(array, newitem) {
+//   array.push(newitem);
+//   // return array;
+// }
+// addNew(expense, 1980);
 //console.log(expense);
 
-function refund(array, change) {
-  let newAmount = array[3] - change;
-  array[3] = newAmount;
-}
+// function refund(array, change) {
+//   let newAmount = array[3] - change;
+//   array[3] = newAmount;
+// }
 //refund(expense, 200);
 //console.log(expense);
 
-const heros = ['spider man', 'thor', 'hulk', 'iron man', 'captain america'];
+// const heros = ['spider man', 'thor', 'hulk', 'iron man', 'captain america'];
 
-function findLength(array) {
-  return array.length;
-}
+// function findLength(array) {
+//   return array.length;
+// }
 //console.log(findLength(heros));
 
-function addPanther(array, newitem) {
-  array.push(newitem);
-  return array;
-}
+// function addPanther(array, newitem) {
+//   array.push(newitem);
+//   return array;
+// }
 //console.log(addPanther(heros, 'black panther'));
 
-function addPantherAfter(array, newitem) {
-  array.pop();
-  array.splice(3, 0, newitem);
-  return array;
-}
+// function addPantherAfter(array, newitem) {
+//   array.pop();
+//   array.splice(3, 0, newitem);
+//   return array;
+// }
 //console.log(addPantherAfter(heros, 'black panther'));
 
-function removeAngry(array, replacement) {
-  array.splice(1, 2, replacement);
-  return array;
-}
+// function removeAngry(array, replacement) {
+//   array.splice(1, 2, replacement);
+//   return array;
+// }
 //console.log(removeAngry(heros, 'doctor strange'));
 
-function sortItems(array) {
-  array.sort();
-  return array;
-}
+// function sortItems(array) {
+//   array.sort();
+//   return array;
+// }
 //console.log(sortItems(heros));
 
-function generateOddnumbers(n) {
-  for (let x = 0; x < n; x++) {
-    if (x % 2 != 0) console.log(x);
+// function generateOddnumbers(n) {
+//   for (let x = 0; x < n; x++) {
+//     if (x % 2 != 0) console.log(x);
+//   }
+// }
+// generateOddnumbers(10);
+
+// var removeElement = function (nums, val) {
+//   let k = 0;
+//   k = nums.splice()
+//   return k;
+// };
+// const nums = [3, 2, 2, 3];
+// console.log(removeElement(nums, 3));
+
+var removeDuplicates = function (nums) {
+  nums.sort((a, b) => a - b);
+  const newarr = new Map();
+  nums.forEach((item) => {
+    newarr.set(item, item);
+  });
+  const temp = [...newarr.keys()];
+  nums.length = 0;
+  temp.forEach((item, index) => {
+    nums[index] = item;
+  });
+  return nums;
+};
+const arr = [-3, -1, 0, 0, 0, 3, 3];
+//console.log(removeDuplicates(arr));
+
+var findMedianSortedArrays = function (nums1, nums2) {
+  const result = [...nums1, ...nums2].sort((a, b) => a - b);
+  let median = 0;
+  if (result.length % 2 === 0 && result.length === 3) {
+    median = result[parseInt(result.length / 2) + 1];
+  } else {
+    median =
+      (result[parseInt(result.length / 2)] +
+        result[parseInt(result.length / 2) + 1]) /
+      2;
   }
-}
-generateOddnumbers(10);
+  return median;
+};
+const arr1 = [1, 3];
+const arr2 = [2];
+console.log(findMedianSortedArrays(arr1, arr2));
+console.log(3 % 2);
