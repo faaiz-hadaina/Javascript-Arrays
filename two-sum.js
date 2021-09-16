@@ -82,13 +82,15 @@
 // }
 // console.log(recurFib(10));
 
-const result = 123 % 10;
-console.log(result);
-let rev = 0;
-rev = rev * 10 + result;
-console.log(rev);
+// const result = 123 % 10;
+// console.log(result);
+// let rev = 0;
+// rev = rev * 10 + result;
+// console.log(rev);
 
-const result2 = Math.floor(123 / 10);
-console.log(result2);
-const max = Number.MAX_VALUE;
-console.log(max / 10);
+// const result2 = Math.floor(123 / 10);
+// console.log(result2);
+// const max = Number.MAX_VALUE;
+// console.log(max / 10);
+console.log(Math.floor(-(123 / 10)));
+console.log(Math.floor(-0.57));
