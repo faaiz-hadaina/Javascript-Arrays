@@ -1,18 +1,18 @@
-Array.matrix = function (rows, cols, initial) {
-  var arr = [];
-  for (let i = 0; i < rows; i++) {
-    var column = [];
-    for (let j = 0; j < cols; j++) {
-      column[j] = initial;
-    }
-    arr[i] = column;
-  }
-  return arr;
-};
+// Array.matrix = function (rows, cols, initial) {
+//   var arr = [];
+//   for (let i = 0; i < rows; i++) {
+//     var column = [];
+//     for (let j = 0; j < cols; j++) {
+//       column[j] = initial;
+//     }
+//     arr[i] = column;
+//   }
+//   return arr;
+// };
 
-var nums = Array.matrix(5, 5, 0);
-//nums[2][3] = 5;
-console.log(nums);
+// var nums = Array.matrix(5, 5, 0);
+// //nums[2][3] = 5;
+// console.log(nums);
 
 // var grades = [
 //   [1, 2, 3],
@@ -34,3 +34,31 @@ console.log(nums);
 //   total = 0;
 //   average = 0.0;
 // }
+// console.log(`${3} "${typeof 3}"`); // 3 "number"
+// console.log(`"${'a'}" "${typeof 'a'}"`); // "a" "string"
+// console.log(`${2} "${typeof 2}"`, `"${'a'}" "${typeof 'a'}"`); // 2 "number" "a" "string"
+const allNumbers = new Set();
+function getUniqueSortedNumbers(arr) {
+  for (words in arr) {
+    if (typeof arr[words] === 'number') {
+      allNumbers.add(arr[words]);
+    }
+    getUniqueSortedNumbers(arr[words]);
+  }
+  return Array.from(allNumbers).sort();
+}
+console.log(
+  getUniqueSortedNumbers({
+    a: {
+      x: 3,
+      y: {
+        d: 2,
+        e: 2,
+        f: {
+          g: 4
+        },
+        z: 8
+      }
+    }
+  })
+); // [2, 3, 4, 8];
